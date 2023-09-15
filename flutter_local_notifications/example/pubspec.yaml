@@ -10,7 +10,8 @@ dependencies:
     sdk: flutter
   flutter_local_notifications:
     path: ../
-  flutter_timezone: ^1.0.7
+  flutter_timezone: 
+    git: https://github.com/kumsumit/flutter_timezone.git
   http: ^1.1.0
   image: 
     git: https://github.com/kumsumit/image.git

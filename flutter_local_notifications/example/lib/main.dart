@@ -2732,7 +2732,7 @@ class _HomePageState extends State<HomePage> {
             if (channels?.isEmpty ?? true)
               const Text('No notification channels')
             else
-              for (AndroidNotificationChannel channel in channels!)
+              for (final AndroidNotificationChannel channel in channels!)
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
@@ -2832,7 +2832,7 @@ Future<void> _showLinuxNotificationWithByteDataIcon() async {
     'icons/app_icon_density.png',
   );
   final image.Image? iconData = image.decodePng(
-    assetIcon.buffer.asUint8List().toList(),
+    assetIcon.buffer.asUint8List(),
   );
   final Uint8List iconBytes = iconData!.getBytes();
   final LinuxNotificationDetails linuxPlatformChannelSpecifics =

@@ -53,6 +53,7 @@ public class ActionBroadcastReceiver extends BroadcastReceiver {
         FlutterLocalNotificationsPlugin.extractNotificationResponseMap(intent);
 
     if (intent.getBooleanExtra(FlutterLocalNotificationsPlugin.CANCEL_NOTIFICATION, false)) {
+
       NotificationManagerCompat.from(context)
           .cancel((int) action.get(FlutterLocalNotificationsPlugin.NOTIFICATION_ID));
     }

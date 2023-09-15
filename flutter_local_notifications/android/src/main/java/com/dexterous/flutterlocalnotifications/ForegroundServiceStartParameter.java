@@ -1,5 +1,7 @@
 package com.dexterous.flutterlocalnotifications;
 
+import androidx.annotation.NonNull;
+
 import com.dexterous.flutterlocalnotifications.models.NotificationDetails;
 
 import java.io.Serializable;
@@ -22,6 +24,7 @@ public class ForegroundServiceStartParameter implements Serializable {
     this.foregroundServiceTypes = foregroundServiceTypes;
   }
 
+  @NonNull
   @Override
   public String toString() {
     return "ForegroundServiceStartParameter{"
