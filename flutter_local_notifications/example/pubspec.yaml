@@ -3,16 +3,20 @@ description: Demonstrates how to use the flutter_local_notifications plugin.
 publish_to: none
 
 dependencies:
-  cupertino_icons: ^1.0.2
-  device_info_plus: ^8.0.0
+  cupertino_icons: ^1.0.6
+  device_info_plus: 
+    git: https://github.com/kumsumit/device_info_plus.git
   flutter:
     sdk: flutter
   flutter_local_notifications:
     path: ../
-  flutter_timezone: ^1.0.4
-  http: ^0.13.4
-  image: ^3.0.8
-  path_provider: ^2.0.0
+  flutter_timezone: ^1.0.7
+  http: ^1.1.0
+  image: 
+    git: https://github.com/kumsumit/image.git
+  path_provider:
+    git: https://github.com/kumsumit/path_provider.git
+
 
 dev_dependencies:
   flutter_driver:
@@ -37,5 +41,5 @@ flutter:
     - sound/
 
 environment:
-  sdk: ">=2.15.0 <3.0.0"
-  flutter: ">=2.8.0"
+  sdk: ">=3.1.0 <4.0.0"
+  flutter: ">=3.13.0"

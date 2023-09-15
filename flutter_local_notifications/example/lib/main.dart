@@ -2532,7 +2532,7 @@ class _HomePageState extends State<HomePage> {
     } else if (Platform.isIOS) {
       final DeviceInfoPlugin deviceInfo = DeviceInfoPlugin();
       final IosDeviceInfo iosInfo = await deviceInfo.iosInfo;
-      final List<String> fullVersion = iosInfo.systemVersion!.split('.');
+      final List<String> fullVersion = iosInfo.systemVersion.split('.');
       if (fullVersion.isNotEmpty) {
         final int? version = int.tryParse(fullVersion[0]);
         if (version != null && version < 10) {
@@ -2559,7 +2559,7 @@ class _HomePageState extends State<HomePage> {
           if (activeNotifications!.isEmpty)
             const Text('No active notifications'),
           if (activeNotifications.isNotEmpty)
-            for (ActiveNotification activeNotification in activeNotifications)
+            for (final ActiveNotification activeNotification in activeNotifications)
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
